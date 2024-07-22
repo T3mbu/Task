@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>API Table Example</title>
+
+</head>
+<body>
+    <h1>API Table Example</h1>
+    <table>
+        <tr>
+            <th>API Name</th>
+            <th>API Description (with parameters)</th>
+            <th>Results</th>
+        </tr>
+        <tr>
+            <td>Country Information API</td>
+            <td>
+                <label for="selCountry">Country: </label>
+                <select id="selCountry">
+                    <option value="GB">Great Britain</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                    <option value="US">USA</option>
+                </select><br>
+                <label for="selLanguage">Language: </label>
+                <select id="selLanguage">
+                    <option value="en">English</option>
+                    <option value="fr">Francais</option>
+                    <option value="de">Deutsche</option>
+                    <option value="it">Italian</option>
+                </select><br>
+                <button id="btnRun">Run</button>
+            </td>
+            <td>
+                <div id="countryResults">
+                    <table>
+                        <tr>
+                            <td align="right">Continent: </td>
+                            <td id="txtContinent"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Capital: </td>
+                            <td id="txtCapital"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Languages: </td>
+                            <td id="txtLanguages"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Population: </td>
+                            <td id="txtPopulation"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Area (km<sup>2</sup>): </td>
+                            <td id="txtArea"></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Ocean Information API</td>
+            <td>
+                <label for="selLatitude">Latitude: </label>
+                <input type="number" id="selLatitude" step="any" placeholder="Enter latitude"><br>
+                <label for="selLongitude">Longitude: </label>
+                <input type="number" id="selLongitude" step="any" placeholder="Enter longitude"><br>
+                <button id="oceanBtn">Submit</button>
+            </td>
+            <td>
+                <div id="oceanResults">
+                    <div id="output"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Neighbourhood Information API</td>
+            <td>
+                <label for="neighLatitude">Latitude: </label>
+                <input type="number" id="neighLatitude" step="any" placeholder="Enter latitude"><br>
+                <label for="neighLongitude">Longitude: </label>
+                <input type="number" id="neighLongitude" step="any" placeholder="Enter longitude"><br>
+                <button id="neighBtn">Submit</button>
+            </td>
+            <td>
+                <div id="neighResults"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Timezone Information API</td>
+            <td>
+                <label for="tzLatitude">Latitude: </label>
+                <input type="number" id="tzLatitude" step="any" placeholder="Enter latitude"><br>
+                <label for="tzLongitude">Longitude: </label>
+                <input type="number" id="tzLongitude" step="any" placeholder="Enter longitude"><br>
+                <label for="tzRadius">Radius (km): </label>
+                <input type="number" id="tzRadius" step="any" placeholder="Enter radius (optional)"><br>
+                <label for="tzLang">Language: </label>
+                <input type="text" id="tzLang" placeholder="Enter language code (optional)"><br>
+                <label for="tzDate">Date: </label>
+                <input type="date" id="tzDate"><br>
+                <button id="tzBtn">Submit</button>
+            </td>
+            <td>
+                <div id="tzResults">
+                    <div id="tzOutput"></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <script src="libs/js/jquery-2.2.3.min.js"></script>
+    <script src="libs/js/script.js"></script>
+	<link rel = "stylesheet" href = "libs/css/styles.css">
+</body>
+</html>
